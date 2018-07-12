@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+
+int main() {
+	int s, gia;
+	printf("nhap vao so m da di:");
+	scanf_s("%d",&s);
+	
+	if (s <= 1000) {
+		gia = 10000;
+	}
+	 else if (1000 < s <= 30000) {
+		 gia = 10000 + (s - 1000) * 1500 / 200;
+	}
+	else {
+		gia = 10000 + 29000 * 1500 / 200 + (s - 30000)*8000 / 1000;
+	}
+	printf("gia khach can phai tra la:%d",gia);
+
+	_getch();
+	return 0;
+
+	
+}

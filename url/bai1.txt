@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include <conio.h>
+
+int main()
+{
+	int a, b, c, s, n;
+	printf("nhap vao so nguyên n co 3 chu so:");
+	scanf_s("%d", &n);
+	if (n < 100 || n>999) {
+		printf("so khong hop le.");
+	}
+	else
+	{
+		a = n / 100;
+		b = (n - a * 100) / 10;
+		c = n - a * 100 - b * 10;
+		if (a < b) {
+			s = a;
+			a = b;
+			b = s;
+		}
+		if (a < c) {
+			s = a;
+			a = c;
+			c = s;
+		}
+		if (b < c) {
+			s = b;
+			b = c;
+			c = s;
+		}
+		n = a * 100 + b * 10 + c;
+		printf("so da duoc viet lai là:%d", n);
+
+	}
+
+	_getch();
+	return 0;
+}
